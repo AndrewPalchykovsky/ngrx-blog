@@ -5,7 +5,7 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {AuthModule} from './auth/auth/auth.module';
+import {AuthModule} from './auth/auth.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,7 +13,7 @@ import {AuthModule} from './auth/auth/auth.module';
     BrowserModule,
     AppRoutingModule,
     AuthModule,
-    StoreModule.forRoot([]),
+    StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: !isDevMode(),
