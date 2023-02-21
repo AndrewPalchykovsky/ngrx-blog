@@ -1,6 +1,7 @@
 import {HttpClientModule} from '@angular/common/http';
 import {isDevMode, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {EffectsModule} from '@ngrx/effects';
 import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
@@ -21,6 +22,7 @@ import {AuthModule} from './auth/auth.module';
       logOnly: !isDevMode(),
       autoPause: true,
     }),
+    EffectsModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent],
